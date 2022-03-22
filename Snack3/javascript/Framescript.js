@@ -88,7 +88,7 @@ function askNumbers(numbersToAsk) {
     return userNumbers;
 }
 
-//----------inverto una stringa  casa ===> asac ---------//
+//----------inverto una stringa  casa ===> asac---------//
 
 function inverser(x) {
     var newString = "";
@@ -98,4 +98,15 @@ function inverser(x) {
         newString += x[i];
     }
     return (newString);
+}
+
+//----------pushare gli elementi di due array in uno alternativamente---------//
+
+function alternatePush(arr1, arr2) {
+    let myArray = [];
+    for (let i = 0; i < arr2.length; i++) {
+        myArray.push(arr1[i]);
+        myArray.push(arr2[i]);
+    }
+    return myArray;
 }
