@@ -69,8 +69,8 @@ const weighttwo = somma(lengthDwn);
 
 console.table(lengthUp);
 console.table(lengthDwn);
-console.log(weightone);
-console.log(weighttwo);
+console.log(weightone + '  grammi totali zucchine con lunghezza superiore a 15 cm');
+console.log(weighttwo + '  grammi totali zucchine con lunghezza inferiore a 15 cm');
 
 
 
@@ -78,14 +78,15 @@ function confront(object) {
     for (let i = 0; i < object.length; i++) {
         const zucchine = object[i];
         // distinguo le zucchine nei due array
-        if (zucchine.lunghezza > 15) {
-            lengthUp.push(zucchine.varietà, zucchine.lunghezza + " cm", zucchine.peso);
+        if (object[i].lunghezza > 15) {
+            lengthUp.push(object[i]);
         } else {
-            lengthDwn.push(zucchine.varietà, zucchine.lunghezza + " cm", zucchine.peso);
+            lengthDwn.push(object[i]);
         }
     }
-    return confront;
+    return { lengthUp, lengthDwn };
 }
+
 
 function somma(sum) {
     let somma = 0;
